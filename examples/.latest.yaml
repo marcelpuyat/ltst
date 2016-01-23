@@ -1,0 +1,23 @@
+---
+entries:
+-
+  name: The Morning Paper
+  command: morningpaper
+  query: "[rel='bookmark']"
+  url: http://blog.acolyer.org
+-
+  name: Software Engineering Daily
+  command: sedaily
+  query: ".post-title a"
+  url: http://softwareengineeringdaily.com
+-
+  name: The Changelog
+  command: changelog
+  query: ".post-title__text"
+  url: https://changelog.com/
+-
+  name: High Scalability
+  command: highscalability
+  query: ".title .journal-entry-navigation-current"
+  url: http://highscalability.com/
+...
