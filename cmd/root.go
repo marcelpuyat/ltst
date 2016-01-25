@@ -92,7 +92,7 @@ func parallelPrintLatestOfAllCommands(rootCmd *cobra.Command, numResultsPerComma
 
 	// -1 is because we are skipping over the help command
 	for i := 0; i < len(rootCmd.Commands())-1; i++ {
-		fmt.Println(<-results)
+		fmt.Printf(<-results)
 	}
 }
 

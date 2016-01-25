@@ -20,4 +20,19 @@ entries:
   command: highscalability
   query: ".title .journal-entry-navigation-current"
   url: http://highscalability.com/
+-
+  name: Brave New Geek
+  command: bravenewgeek
+  query: ".entry-title [rel='bookmark']"
+  url: http://bravenewgeek.com/
+-
+  name: Software Engineering Radio
+  command: seradio
+  query: ".post-title [rel='bookmark']"
+  url: http://www.se-radio.net/
+-
+  name: ACM Queue Databases Blog
+  command: acmqueuedatabases
+  query: ".article a"
+  url: "https://queue.acm.org/listing.cfm?item_topic=Databases&qc_type=theme_list&filter=Databases&page_title=Databases&order=desc"
 ...
