@@ -17,7 +17,7 @@ For example, to pull the latest article titles from [The Morning Paper](http://b
   url: http://blog.acolyer.org/
 ```
 
-Then, when you type in `ltst`, you'll see the first entry for your provided search:
+Then, when you type in `ltst`, you'll see the latest entry for your provided search:
 ```
 The Morning Paper
 	Chapar: Certified Causally Consistent Distributed Key-Value Stores
@@ -26,3 +26,19 @@ The Morning Paper
 All entries are fetched in parallel, making for a blazingly fast and simple way of seeing what's up with your favorite sites!
 
 Use `ltst --help` to see other flags and features which are automatically generated as you add to your config file.
+
+Other example commands:
+```
+> ltst morningpaper   # Outputs the latest 5 entries for The Morning Paper
+
+The Morning Paper
+	Chapar: Certified Causally Consistent Distributed Key-Value Stores
+	Is Sound Gradual Typing Dead?
+	Reducing Crash Recoverability to Reachability
+	‘Cause I’m Strong Enough: Reasoning About Consistency Choices in Distributed Systems
+	Modelling the ARM v8 Architecture, Operationally: Concurrency and ISA
+```
+
+```
+> ltst morningpaper -o   # Opens blog.acolyer.org in your default browser
+```
