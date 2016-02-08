@@ -17,7 +17,6 @@ package cmd
 import (
 	"fmt"
 	"os"
-
 	"errors"
 	"github.com/PuerkitoBio/goquery"
 	"github.com/spf13/cobra"
@@ -26,23 +25,27 @@ import (
 	"strings"
 )
 
-const BASH_COMPLETION_FILENAME = "latest-completion.sh"
+const BASH_COMPLETION_FILENAME = "ltst-completion.sh"
 
+// Flags
 const GEN_AUTOCOMPLETE_FLAG = "gen-autocomplete"
 const NUM_RESULTS_FLAG = "num"
 const OPEN_FLAG = "open"
 
+// Required config keys
 const URL_KEY = "url"
 const QUERY_KEY = "query"
 const NAME_KEY = "name"
+const COMMAND_KEY = "command"
+
+// Optional config keys
 const SHORT_DESC_KEY = "shortDescription"
 const LONG_DESC_KEY = "longDescription"
-const COMMAND_KEY = "command"
 
 var REQUIRED_CONFIG = [...]string{URL_KEY, QUERY_KEY, NAME_KEY, COMMAND_KEY}
 
 const CONFIG_FILE_TYPE = "yaml"
-const CONFIG_FILENAME = ".latest"
+const CONFIG_FILENAME = ".ltst"
 const CONFIG_DIR = "$HOME"
 const CONFIG_FULL_PATH = CONFIG_DIR + "/" + CONFIG_FILENAME + "." + CONFIG_FILE_TYPE
 
@@ -51,8 +54,9 @@ var cfgFile string
 // Map of command names to the metadata of the command
 var cmdMap map[string]map[interface{}]interface{} = make(map[string]map[interface{}]interface{})
 
+// RootCmd is the base command that defines this cobra app. In this case, it is ltst.
 var RootCmd = &cobra.Command{
-	Use:   "latest",
+	Use:   "ltst",
 	Short: "Get the latest news",
 	Long:  "Get the latest news from all of your favorite sites! Fetched in parallel!",
 	Run: func(cmd *cobra.Command, args []string) {
