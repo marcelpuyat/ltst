@@ -1,10 +1,10 @@
 # ltst
+View the latest news of your choosing right in your terminal. All results are fetched in parallel, making for a blazingly fast and simple way of seeing what's up with your favorite sites!
 
 ## Installation
 `go get github.com/marcelpuyat/ltst`
 
-## Description
-View the latest news of your choosing right in your terminal.
+## Quick Start
 
 Simply define a [config file](/examples/ltst-config-example.yaml) under `$HOME/.ltst.yaml` to pull markup (using [goquery](https://github.com/PuerkitoBio/goquery) syntax) from URLs of your choosing.
 
@@ -22,8 +22,6 @@ Then, when you type in `ltst`, you'll see the latest entry for your provided sea
 The Morning Paper
 	Chapar: Certified Causally Consistent Distributed Key-Value Stores
 ```
-
-All entries are fetched in parallel, making for a blazingly fast and simple way of seeing what's up with your favorite sites!
 
 Use `ltst --help` to see other flags and features which are automatically generated as you add to your config file.
 
